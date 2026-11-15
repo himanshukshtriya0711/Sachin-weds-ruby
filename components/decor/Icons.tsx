@@ -90,8 +90,8 @@ export function PhotosIcon(p: P) {
 
 export const eventIcons: Record<WeddingEventId, (p: P) => React.JSX.Element> = {
   lagan: RingsIcon,
-  baraat: HorseIcon,
-  vidaai: BirdsIcon,
+  sehrabandhi: DiyaIcon,
+  barat: HorseIcon,
 };
 
 /* ---------- small scene illustrations for the celebration cards ---------- */

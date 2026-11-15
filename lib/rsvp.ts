@@ -14,7 +14,7 @@ export type RsvpErrors = Partial<Record<keyof RsvpData, string>>;
 
 export const RSVP_LIMITS = { maxGuests: 10, maxMessage: 500, maxName: 80 } as const;
 
-const EVENT_IDS: WeddingEventId[] = ["lagan", "baraat", "vidaai"];
+const EVENT_IDS: WeddingEventId[] = ["lagan", "sehrabandhi", "barat"];
 
 /** Shared by the form (client) and the API route (server). */
 export function validateRsvp(data: Partial<RsvpData>): RsvpErrors {

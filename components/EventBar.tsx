@@ -4,8 +4,8 @@ import { Stagger, StaggerItem } from "./ui/Reveal";
 
 const barIcons: Record<WeddingEventId, typeof RingsIcon> = {
   lagan: RingsIcon,
-  baraat: HorseIcon,
-  vidaai: DiyaIcon,
+  sehrabandhi: DiyaIcon,
+  barat: HorseIcon,
 };
 
 /** Rounded white strip of the three events, overlapping the bottom of the hero. */

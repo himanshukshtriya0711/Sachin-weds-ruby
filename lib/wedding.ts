@@ -3,7 +3,7 @@
  * venue details or the story — the components read everything from it.
  */
 
-export type WeddingEventId = "lagan" | "baraat" | "vidaai";
+export type WeddingEventId = "lagan" | "sehrabandhi" | "barat";
 
 export type WeddingEvent = {
   id: WeddingEventId;
@@ -24,27 +24,49 @@ export const couple = {
   monogram: { first: "R", second: "S" },
 };
 
+/** Groom's family details */
+export const groomFamily = {
+  name: "Sachin Kumar",
+  mother: "Mrs. Usha Rani",
+  father: "Mr. Ombir Singh",
+  grandmother: "Late Mrs. Shanti Devi",
+  grandfather: "Late Mr. Lala Ram",
+  residence: "G 642-A, Sangam Vihar, Near Savitri Public School, New Delhi – 110080",
+  contact: ["8368486067", "9758251746"],
+};
+
+/** Bride's family details */
+export const brideFamily = {
+  name: "Ruby Singh",
+  mother: "Mrs. Savitri Devi",
+  father: "Mr. Soran Singh",
+  residence: "A-20, Fauji Colony, Dayalbagh, Agra – 282005",
+};
+
+/** RSVP / compliments family name */
+export const hostFamily = "Niboriya Family";
+
 export const events: WeddingEvent[] = [
   {
     id: "lagan",
-    title: "Lagan & Sagai",
+    title: "Lagan",
     date: "2026-12-07",
-    start: "12:00", // 12 PM, afternoon
+    start: "18:00", // 6 PM, evening
     description: "Rings, blessings and the first promise as two families become one.",
   },
   {
-    id: "baraat",
-    title: "Baraat",
+    id: "sehrabandhi",
+    title: "Sehra Bandhi & Ghurchari",
     date: "2026-12-11",
-    start: "20:00", // 8 PM, night
-    description: "Music, dhol and dancing as the groom arrives to wed his bride.",
+    start: "08:00", // 8 AM, morning
+    description: "Sacred rituals mark the groom's preparation as the wedding day begins.",
   },
   {
-    id: "vidaai",
-    title: "Vidaai",
-    date: "2026-12-12",
+    id: "barat",
+    title: "Departure of Barat",
+    date: "2026-12-11",
     start: "10:00", // 10 AM, morning
-    description: "A tender farewell, wrapped in blessings, as a new journey begins.",
+    description: "Music, dhol and dancing as the groom departs for the wedding venue.",
   },
 ];
 
@@ -55,20 +77,28 @@ export function formatTime(hhmm: string) {
   return `${h12}:${String(m).padStart(2, "0")} ${h < 12 ? "AM" : "PM"}`;
 }
 
-/** The countdown runs to the start of the Baraat (IST). */
-const baraat = events.find((e) => e.id === "baraat")!;
-export const countdownTarget = `${baraat.date}T${baraat.start}:00+05:30`;
+/** The countdown runs to the start of the Barat (IST). */
+const barat = events.find((e) => e.id === "barat")!;
+export const countdownTarget = `${barat.date}T${barat.start}:00+05:30`;
 
 /**
- * Venue — PLACEHOLDER. Replace every field with the real details.
- * `mapQuery` is what Google Maps searches for when guests tap "View on Map";
- * set `mapUrl` instead if you'd rather paste a specific Google Maps share link.
+ * Lagan venue — Sattu Sanghwan Banquet Hall
+ */
+export const laganVenue = {
+  name: "Sattu Sanghwan Banquet Hall",
+  address: "L-1, 484/8, Sangam Vihar, New Delhi – 110062",
+  mapQuery: "Sattu Sanghwan Banquet Hall, L-1, 484/8, Sangam Vihar, New Delhi 110062",
+  mapUrl: "" as string,
+};
+
+/**
+ * Wedding / Barat venue — Samadhiya Farm House
  */
 export const venue = {
   name: "Samadhiya Farm House",
-  address: "Near Sikandra Sabzi Mandi, Sikandra, Agra, Uttar Pradesh",
+  address: "Mathura Road, Sikandra, Agra – 282007",
   note: "We look forward to welcoming you. Tap below for directions straight to the venue.",
-  mapQuery: "Samadhiya Farm House, near Sikandra Sabzi Mandi, Sikandra, Agra, Uttar Pradesh",
+  mapQuery: "Samadhiya Farm House, Mathura Road, Sikandra, Agra, Uttar Pradesh 282007",
   /** Optional: paste the venue's Google Maps share link here for a pin-exact location. */
   mapUrl: "" as string,
 };
@@ -92,7 +122,7 @@ export function venueEmbedSrc() {
  * RSVPs are sent to this WhatsApp number after the form is confirmed.
  * Country code + number, digits only (India = 91).
  */
-export const whatsappNumber = "919536734736";
+export const whatsappNumber = "918527984754";
 
 /**
  * Optional background music. Drop an mp3 into /public (e.g. /public/music.mp3)

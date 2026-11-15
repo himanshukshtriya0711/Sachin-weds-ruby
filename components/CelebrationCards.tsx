@@ -20,7 +20,7 @@ const styles: Record<WeddingEventId, { bg: string; decor: ReactNode }> = {
       </>
     ),
   },
-  baraat: {
+  sehrabandhi: {
     bg: "bg-[linear-gradient(140deg,#E7D8F6_0%,#D6BDF0_55%,#C8A9E8_100%)]",
     decor: (
       <>
@@ -30,7 +30,7 @@ const styles: Record<WeddingEventId, { bg: string; decor: ReactNode }> = {
       </>
     ),
   },
-  vidaai: {
+  barat: {
     bg: "bg-[linear-gradient(140deg,#FBF8FF_0%,#F0E7FA_55%,#E4D3F4_100%)]",
     decor: (
       <>

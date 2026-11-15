@@ -27,14 +27,14 @@ const lato = Lato({
 });
 
 const names = `${couple.bride} & ${couple.groom}`;
-const description = `Together with their families, ${names} invite you to celebrate their wedding — Lagan & Sagai on 07 December, Baraat on 11 December and Vidaai on 12 December 2026.`;
+const description = `Together with their families, ${names} invite you to celebrate their wedding — Lagan on 07 December, Sehra Bandhi & Ghurchari and Departure of Barat on 11 December 2026.`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: `${names} · Wedding Invitation`,
   description,
   applicationName: `${names} Wedding`,
-  keywords: ["Ruby and Sachin", "wedding invitation", "Indian wedding", "Baraat", "Lagan", "Sagai", "Vidaai", "RSVP"],
+  keywords: ["Ruby and Sachin", "wedding invitation", "Indian wedding", "Lagan", "Sehra Bandhi", "Barat", "RSVP"],
   openGraph: {
     type: "website",
     url: "/",
