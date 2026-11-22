@@ -19,9 +19,9 @@ export type WeddingEvent = {
 export const calendarDurationHours = 3;
 
 export const couple = {
-  bride: "Ruby",
-  groom: "Sachin",
-  monogram: { first: "R", second: "S" },
+  bride: "Sachin",
+  groom: "Ruby",
+  monogram: { first: "S", second: "R" },
 };
 
 /** Groom's family details */
