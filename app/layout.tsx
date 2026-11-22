@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   title: `${names} · Wedding Invitation`,
   description,
   applicationName: `${names} Wedding`,
-  keywords: ["Ruby and Sachin", "wedding invitation", "Indian wedding", "Lagan", "Sehra Bandhi", "Barat", "RSVP"],
+  keywords: ["Sachin and Ruby", "wedding invitation", "Indian wedding", "Lagan", "Sehra Bandhi", "Barat", "RSVP"],
   openGraph: {
     type: "website",
     url: "/",

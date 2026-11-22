@@ -31,12 +31,12 @@ export const images = {
     focus: "48% 22%",
   },
   story: [
-    { src: bouquet, alt: "Ruby and Sachin together, Ruby holding a bouquet of roses", focus: "50% 25%" },
-    { src: selfie, alt: "A smiling selfie of Ruby and Sachin", focus: "60% 40%" },
+    { src: bouquet, alt: "Sachin and Ruby together, Ruby holding a bouquet of roses", focus: "50% 25%" },
+    { src: selfie, alt: "A smiling selfie of Sachin and Ruby", focus: "60% 40%" },
   ],
   venue: {
     src: floralArch,
-    alt: "Ruby and Sachin beside a white floral arch",
+    alt: "Sachin and Ruby beside a white floral arch",
     focus: "50% 30%",
   },
 } satisfies Record<string, Photo | Photo[]>;
@@ -46,12 +46,12 @@ export const images = {
  * landscape photos span two columns. Eight portraits fill the desktop grid exactly.
  */
 export const galleryPhotos: Photo[] = [
-  { src: traditionalStage, alt: "Ruby and Sachin in traditional outfits on a floral stage", focus: "50% 20%" },
+  { src: traditionalStage, alt: "Sachin and Ruby in traditional outfits on a floral stage", focus: "50% 20%" },
   { src: celebrationCandid, alt: "Sachin smiling at Ruby during a celebration", focus: "50% 25%" },
-  { src: rooftop, alt: "Ruby and Sachin on a rooftop terrace", focus: "50% 30%" },
+  { src: rooftop, alt: "Sachin and Ruby on a rooftop terrace", focus: "50% 30%" },
   { src: traditionalPortrait, alt: "Sachin and Ruby in traditional attire", focus: "50% 22%" },
-  { src: floralArch, alt: "Ruby and Sachin beside a white floral arch", focus: "50% 25%" },
-  { src: bouquet, alt: "Ruby and Sachin with a bouquet of roses", focus: "50% 25%" },
-  { src: templeVisit, alt: "Ruby and Sachin on a temple visit", focus: "50% 55%" },
-  { src: celebration, alt: "Ruby and Sachin at a festive evening celebration", focus: "50% 25%" },
+  { src: floralArch, alt: "Sachin and Ruby beside a white floral arch", focus: "50% 25%" },
+  { src: bouquet, alt: "Sachin and Ruby with a bouquet of roses", focus: "50% 25%" },
+  { src: templeVisit, alt: "Sachin and Ruby on a temple visit", focus: "50% 55%" },
+  { src: celebration, alt: "Sachin and Ruby at a festive evening celebration", focus: "50% 25%" },
 ];
