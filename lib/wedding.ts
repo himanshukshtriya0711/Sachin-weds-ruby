@@ -54,20 +54,6 @@ export const events: WeddingEvent[] = [
     start: "18:00", // 6 PM, evening
     description: "Rings, blessings and the first promise as two families become one.",
   },
-  {
-    id: "sehrabandhi",
-    title: "Sehra Bandhi & Ghurchari",
-    date: "2026-12-11",
-    start: "08:00", // 8 AM, morning
-    description: "Sacred rituals mark the groom's preparation as the wedding day begins.",
-  },
-  {
-    id: "barat",
-    title: "Departure of Barat",
-    date: "2026-12-11",
-    start: "10:00", // 10 AM, morning
-    description: "Music, dhol and dancing as the groom departs for the wedding venue.",
-  },
 ];
 
 /** "20:00" → "8:00 PM" */
@@ -77,9 +63,9 @@ export function formatTime(hhmm: string) {
   return `${h12}:${String(m).padStart(2, "0")} ${h < 12 ? "AM" : "PM"}`;
 }
 
-/** The countdown runs to the start of the Barat (IST). */
-const barat = events.find((e) => e.id === "barat")!;
-export const countdownTarget = `${barat.date}T${barat.start}:00+05:30`;
+/** The countdown runs to the start of Lagan (IST). */
+const lagan = events.find((e) => e.id === "lagan")!;
+export const countdownTarget = `${lagan.date}T${lagan.start}:00+05:30`;
 
 /**
  * Lagan venue — Sattu Sanghwan Banquet Hall
@@ -95,10 +81,10 @@ export const laganVenue = {
  * Wedding / Barat venue — Samadhiya Farm House
  */
 export const venue = {
-  name: "Samadhiya Farm House",
-  address: "Mathura Road, Sikandra, Agra – 282007",
+  name: "Sattu Sanghwan Banquet Hall",
+  address: "L-1, 484/8, Sangam Vihar, New Delhi - 110062",
   note: "We look forward to welcoming you. Tap below for directions straight to the venue.",
-  mapQuery: "Samadhiya Farm House, Mathura Road, Sikandra, Agra, Uttar Pradesh 282007",
+  mapQuery: "Sattu Sanghwan Banquet Hall, L-1, 484/8, Sangam Vihar, New Delhi 110062",
   /** Optional: paste the venue's Google Maps share link here for a pin-exact location. */
   mapUrl: "" as string,
 };
