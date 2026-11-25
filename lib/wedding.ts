@@ -13,6 +13,8 @@ export type WeddingEvent = {
   /** Start time, 24-hour "HH:MM" in IST. Shown as e.g. "12:00 PM" and used for calendar invites. */
   start: string;
   description: string;
+  /** Optional venue shown below the card (e.g. for Barat). */
+  venueNote?: string;
 };
 
 /** How long calendar invites block out for each event (no end times were given). */
@@ -51,8 +53,23 @@ export const events: WeddingEvent[] = [
     id: "lagan",
     title: "Lagan",
     date: "2026-12-07",
-    start: "18:00", // 6 PM, evening
+    start: "18:00",
     description: "Rings, blessings and the first promise as two families become one.",
+  },
+  {
+    id: "sehrabandhi",
+    title: "Sehra Bandhi & Ghurchari",
+    date: "2026-12-11",
+    start: "08:00",
+    description: "Sacred rituals mark the groom's preparation as the wedding day begins.",
+  },
+  {
+    id: "barat",
+    title: "Departure of Barat",
+    date: "2026-12-11",
+    start: "10:00",
+    description: "Music, dhol and dancing as the groom departs for the wedding venue.",
+    venueNote: "Samadhiya Farm House, Mathura Road, Sikandra, Agra - 282007",
   },
 ];
 
@@ -63,9 +80,9 @@ export function formatTime(hhmm: string) {
   return `${h12}:${String(m).padStart(2, "0")} ${h < 12 ? "AM" : "PM"}`;
 }
 
-/** The countdown runs to the start of Lagan (IST). */
-const lagan = events.find((e) => e.id === "lagan")!;
-export const countdownTarget = `${lagan.date}T${lagan.start}:00+05:30`;
+/** The countdown runs to the start of the Barat (IST). */
+const barat = events.find((e) => e.id === "barat")!;
+export const countdownTarget = `${barat.date}T${barat.start}:00+05:30`;
 
 /**
  * Lagan venue — Sattu Sanghwan Banquet Hall

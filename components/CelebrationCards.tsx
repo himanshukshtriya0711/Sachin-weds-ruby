@@ -1,4 +1,4 @@
-import { CalendarDays, CalendarPlus, Clock } from "lucide-react";
+import { CalendarDays, CalendarPlus, Clock, MapPin } from "lucide-react";
 import { googleCalendarUrl } from "@/lib/calendar";
 import type { ReactNode } from "react";
 import { events, formatShort, formatTime, type WeddingEventId } from "@/lib/wedding";
@@ -86,6 +86,15 @@ export function CelebrationCards() {
                     <Clock className="size-4" strokeWidth={1.8} />
                     <time dateTime={`${e.date}T${e.start}+05:30`}>{formatTime(e.start)}</time>
                   </p>
+
+                  {/* Venue note — shown only for events that have one (e.g. Barat) */}
+                  {e.venueNote && (
+                    <p className="mt-3 flex items-start gap-1.5 text-[0.82rem] leading-snug text-plum/80">
+                      <MapPin className="mt-[2px] size-3.5 shrink-0 text-gold" strokeWidth={1.8} />
+                      <span>{e.venueNote}</span>
+                    </p>
+                  )}
+
                   <a
                     href={googleCalendarUrl(e)}
                     target="_blank"
