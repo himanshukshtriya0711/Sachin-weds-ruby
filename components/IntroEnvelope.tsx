@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { useCallback, useEffect, useState } from "react";
-import { couple, events, formatShort } from "@/lib/wedding";
+import { couple } from "@/lib/wedding";
 import { useGuestName } from "@/lib/useGuestName";
 import { FloralCluster } from "./decor/FloralCluster";
 import { LotusDivider } from "./decor/Ornaments";
@@ -155,7 +155,7 @@ export function IntroEnvelope() {
           >
             <span className="script text-3xl text-plum">Save the Date</span>
             <span className="mt-1 font-sans text-[0.65rem] tracking-[0.22em] text-ink-soft uppercase">
-              {events.map((e) => formatShort(e.date).slice(0, 2)).join(" · ")} December 2026
+              11 December 2026
             </span>
           </motion.div>
           {/* envelope body (front pocket) */}
